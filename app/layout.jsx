@@ -27,7 +27,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${(sans.variable, anton.variable)} `}>
         <Header />
-        <div>{children}</div>
+        <SlideFadeTransition />
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
