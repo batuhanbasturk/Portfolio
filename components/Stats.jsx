@@ -1,6 +1,10 @@
 "use client";
-import calculateYear from "@/utils/calculateYear";
+
 import CountUp from "react-countup";
+//Components
+import { skills } from "./resume/Skills";
+//Utils
+import calculateYear from "@/utils/calculateYear";
 
 const stats = [
   {
@@ -13,7 +17,7 @@ const stats = [
   },
   {
     title: "Technologies Used",
-    count: 20,
+    count: skills.skillList.length,
   },
 ];
 
@@ -28,6 +32,7 @@ const Stats = () => {
           >
             <CountUp
               end={stat.count}
+              delay={1.5}
               duration={5}
               separator=","
               className="xl:text-6xl text-4xl font-bold font-number"

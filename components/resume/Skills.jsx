@@ -1,6 +1,5 @@
 import {
   SiNextdotjs,
-  SiTypescript,
   SiTailwindcss,
   SiJavascript,
   SiMysql,
@@ -18,7 +17,7 @@ import {
   TooltipContent,
 } from "../ui/tooltip";
 
-const skills = {
+export const skills = {
   title: "My Skills",
   description: "I have experience with the following technologies",
   skillList: [
