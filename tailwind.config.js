@@ -23,11 +23,13 @@ module.exports = {
     fontFamily: {
       primary: ["var(--font-sans)"],
       anton: ["var(--font-anton)"],
+      number: ["var(--font-black-ops-one)"],
     },
     extend: {
       colors: {
         primary: "#1C201C",
         secondary: "#ECEBF3",
+        tertiary: "#C4D4D3",
         accent: {
           default: "#268CF9",
           hover: "#0078F9",

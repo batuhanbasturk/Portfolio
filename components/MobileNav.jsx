@@ -10,8 +10,10 @@ import {
 import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { IoMenu } from "react-icons/io5";
 import { FaHome, FaFile, FaSuitcase } from "react-icons/fa";
+import logo from "@/public/assets/logo.svg";
 
 const links = [
   {
@@ -40,15 +42,20 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent className="flex flex-col z-50">
         {/*Title*/}
-        <SheetTitle className="text-2xl text-center">Menu</SheetTitle>
+        <SheetTitle />
         {/*Description*/}
         <SheetDescription />
         {/*Logo*/}
-        <div className="mt-32 mb-24 text-center">
-          <Link href="/">
-            <h1 className="text-2xl italic tracking-wide font-anton">
-              Batu <span className="text-accent-default"> B</span>
-            </h1>
+        <div className="mt-24 mb-24 text-center">
+          <Link
+            href="/"
+            className="flex justify-center items-center pointer-events-none"
+          >
+            <Image
+              src={logo}
+              alt="Logo"
+              className="2xl:w-[100px] 2xl:h-[100px] xl:w-[80px] xl:h-[80px] w-[60px] h-[60px] pointer-events-auto cursor-pointer"
+            />
           </Link>
         </div>
         {/*Navigation*/}

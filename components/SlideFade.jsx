@@ -11,14 +11,15 @@ const circleAnimation = {
   },
   exit: {
     opacity: 0,
-    scale: [1, 0],
+    scale: [0, 1],
   },
 };
 
 const SlideFade = () => {
   return (
     <>
-      {[...Array(5)].map((_, index) => {
+      {[...Array(6)].map((_, index) => {
+        const isWhite = index % 2 === 0;
         return (
           <motion.div
             key={index}
@@ -31,7 +32,9 @@ const SlideFade = () => {
               ease: "easeInOut",
               delay: index * 0.1,
             }}
-            className="relative h-full w-full bg-secondary rounded-full"
+            className={`relative h-full w-full rounded-full xl:mx-4 lg:mx-2 mx-1 ${
+              isWhite ? "bg-secondary" : "bg-accent-default"
+            }`}
           />
         );
       })}

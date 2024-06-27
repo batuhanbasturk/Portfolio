@@ -1,18 +1,22 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "./ui/button";
+import logo from "../public/assets/logo.svg";
 //Components
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="2xl:py-14 xl:py-12 lg:py-10 py-8 text-secondary">
+    <header className="2xl:py-12 xl:py-10 lg:py-8 py-6 text-secondary">
       <div className="container mx-auto flex items-center justify-between">
         {/*Logo*/}
         <Link href="/">
-          <h1 className="2xl:text-5xl xl:text-4xl text-3xl italic tracking-wide font-anton">
-            Batu <span className="text-accent-default"> B</span>
-          </h1>
+          <Image
+            src={logo}
+            alt="Logo"
+            className="2xl:w-[100px] 2xl:h-[100px] xl:w-[80px] xl:h-[80px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] cursor-pointer"
+          />
         </Link>
         {/*Navigation*/}
         <div className="hidden xl:flex items-center gap-8">
