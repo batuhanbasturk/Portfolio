@@ -1,20 +1,11 @@
 "use client";
+import calculateYear from "@/utils/calculateYear";
 import CountUp from "react-countup";
-
-const calculateYearsOfExperience = (startDate) => {
-  const currentDate = new Date();
-  const yearsDifference = currentDate.getFullYear() - startDate.getFullYear();
-  const isBeforeStartDate =
-    currentDate.getMonth() < startDate.getMonth() ||
-    (currentDate.getMonth() === startDate.getMonth() &&
-      currentDate.getDate() < startDate.getDate());
-  return isBeforeStartDate ? yearsDifference - 1 : yearsDifference;
-};
 
 const stats = [
   {
     title: "Years of Experience",
-    count: calculateYearsOfExperience(new Date(2023, 0, 1)),
+    count: calculateYear(new Date(2023, 5, 7)),
   },
   {
     title: "Projects Completed",

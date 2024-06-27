@@ -11,9 +11,12 @@
     @apply text-5xl xl:text-7xl font-semibold text-accent-default;
   }
   h2 {
-    @apply text-4xl xl:text-5xl font-semibold;
+    @apply text-4xl xl:text-5xl font-semibold text-accent-default;
   }
   h3 {
     @apply text-3xl font-semibold;
+  }
+  h4 {
+    @apply text-2xl font-semibold;
   }
 }

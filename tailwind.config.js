@@ -30,6 +30,8 @@ module.exports = {
         primary: "#1C201C",
         secondary: "#ECEBF3",
         tertiary: "#C4D4D3",
+        pgray: "#6D7275",
+        tab: "#282C28",
         accent: {
           default: "#268CF9",
           hover: "#0078F9",
