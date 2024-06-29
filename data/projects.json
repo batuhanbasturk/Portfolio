@@ -1,0 +1,53 @@
+[
+  {
+    "num": "01",
+    "title": "Contact Form Management",
+    "category": "Frontend Project",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "/assets/projects/project1.png",
+    "link": "https://github.com/batuhanbasturk/OBSS_FE23/tree/master/contact-form-management",
+    "stack": [
+      { "name": "React" },
+      { "name": "Material UI" },
+      { "name": "MongoDB" },
+      { "name": "Strapi" }
+    ]
+  },
+  {
+    "num": "02",
+    "title": "Forecasting Workforce Capacity for Supermarket Delivery System",
+    "category": "Machine Learning Project",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "/assets/projects/project2.png",
+    "link": "https://github.com/batuhanbasturk/Bitirme-Projesi",
+    "stack": [
+      { "name": "Scikit-learn" },
+      { "name": "Python" },
+      { "name": "Tensorflow" },
+      { "name": "Pandas" },
+      { "name": "Numpy" }
+    ]
+  },
+  {
+    "num": "03",
+    "title": "Space Invaders Game",
+    "category": "Frontend Project",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "/assets/projects/project3.png",
+    "link": "https://github.com/batuhanbasturk/OBSS_FE23/tree/master/space-invaders-game",
+    "stack": [{ "name": "HTML5" }, { "name": "CSS3" }, { "name": "Javascript" }]
+  },
+  {
+    "num": "04",
+    "title": "Fighter Aircraft Status System",
+    "category": "Frontend Project",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "/assets/projects/project4.png",
+    "link": "https://github.com/batuhanbasturk/OBSS_FE23/tree/master/fighter-aircraft/fighter-aircraft-client",
+    "stack": [
+      { "name": "React" },
+      { "name": "Electron.js" },
+      { "name": "Websocket" }
+    ]
+  }
+]

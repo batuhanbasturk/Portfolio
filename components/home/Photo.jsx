@@ -43,7 +43,7 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#0078f9"
+            stroke="var(--stroke-blue)"
             strokeWidth="4"
             initial={{ strokeDasharray: "20 40" }}
             animate={{
@@ -60,7 +60,7 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#ffffff"
+            stroke="var(--stroke-secondary)"
             strokeWidth="4"
             initial={{ strokeDasharray: "20 40", strokeDashoffset: "30" }}
             animate={{

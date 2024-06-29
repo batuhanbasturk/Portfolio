@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
@@ -14,6 +14,7 @@ module.exports = {
       padding: "1rem",
     },
     screens: {
+      xs: "460px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
@@ -28,7 +29,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#1C201C",
-        secondary: "#ECEBF3",
+        secondary: "#EDEDEF",
         tertiary: "#C4D4D3",
         pgray: "#6D7275",
         tab: "#282C28",

@@ -10,9 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-accent-default text-primary font-semibold hover:bg-accent-hover hover:text-secondary focus-visible:ring-2 focus-visible:ring-accent-hover focus-visible:ring-offset-2",
-        primary:
-          "bg-accent-default text-secondary font-semibold hover:bg-accent-hover hover:text-primary focus-visible:ring-2 focus-visible:ring-accent-hover focus-visible:ring-offset-2",
+          "bg-accent-default dark:text-secondary text-primary font-semibold hover:bg-accent-hover hover:text-secondary dark:hover:text-tab focus-visible:ring-2 focus-visible:ring-accent-hover focus-visible:ring-offset-2",
       },
       size: {
         default: "h-10 px-4 py-2",

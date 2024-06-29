@@ -14,7 +14,7 @@ const SlideFadeTransition = () => {
             <SlideFade />
           </div>
           <motion.div
-            className="fixed w-screen h-screen top-0 pointer-events-none bg-primary"
+            className="fixed w-screen h-screen top-0 pointer-events-none bg-secondary dark:bg-primary"
             initial={{ opacity: 1 }}
             animate={{
               opacity: 0,

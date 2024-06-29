@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeSwitch from "./ThemeSwitch";
 
 const links = [
   {
@@ -28,8 +29,8 @@ const Navigation = () => {
             href={link.path}
             className={
               pathname === link.path
-                ? "text-accent-default border-b-2 border-accent-default"
-                : "text-secondary hover:text-accent-hover"
+                ? "text-accent-default border-b-2 border-accent-default font-semibold"
+                : "text-primary dark:text-secondary hover:text-accent-hover dark:hover:text-accent-hover font-semibold transition-colors duration-300 ease-in-out"
             }
           >
             {link.label}

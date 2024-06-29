@@ -1,0 +1,46 @@
+{
+  "title": "My Skills",
+  "description": "I have experience with the following technologies",
+  "skillList": [
+    {
+      "name": "HTML5",
+      "icon": "SiHtml5"
+    },
+    {
+      "name": "CSS3",
+      "icon": "SiCss3"
+    },
+    {
+      "name": "Javascript",
+      "icon": "SiJavascript"
+    },
+    {
+      "name": "React",
+      "icon": "SiReact"
+    },
+    {
+      "name": "Next.js",
+      "icon": "SiNextdotjs"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "SiTailwindcss"
+    },
+    {
+      "name": "Sass",
+      "icon": "SiSass"
+    },
+    {
+      "name": "Node.js",
+      "icon": "SiNodedotjs"
+    },
+    {
+      "name": "MySQL",
+      "icon": "SiMysql"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "SiMongodb"
+    }
+  ]
+}

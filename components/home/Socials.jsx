@@ -29,7 +29,7 @@ const Socials = () => {
             key={index}
             href={link.path}
             passHref
-            className="flex justify-center items-center text-2xl border w-10 h-10 border-accent-default text-accent-default rounded-lg hover:bg-accent-default hover:text-secondary transition-colors duration-300 ease-in-out"
+            className="flex justify-center items-center text-2xl border w-10 h-10 border-accent-default text-accent-default rounded-lg hover:bg-accent-default  hover:text-primary dark:hover:text-secondary transition-colors duration-300 ease-in-out"
           >
             {link.icon}
           </Link>

@@ -24,7 +24,7 @@ const PageTransition = ({ children }) => {
             opacity: 0,
             transition: { delay: 1, duration: 0.3, ease: "easeInOut" },
           }}
-          className="fixed w-screen h-screen bg-primary top-0 pointer-events-none"
+          className="fixed w-screen h-screen bg-secondary dark:bg-primary top-0 pointer-events-none"
         />
         {children}
         {isTransitioning && (

@@ -1,0 +1,17 @@
+{
+  "title": "Education & Certification",
+  "school": [
+    {
+      "name": "Marmara University - Computer Engineering",
+      "date": "09/2019 - 07/2024",
+      "description": [
+        {
+          "value": "For my graduation thesis project, I completed a project titled 'Forecasting Workforce Capacity for Supermarket Delivery System' using machine learning, utilizing data obtained from Turkey's one of the most famous supermarket chain."
+        },
+        {
+          "value": "As a Promotion Committee Member at MIES club, I collaborated with a team to plan and execute one of the largest events for the most active club at Marmara University, with over 600 participants."
+        }
+      ]
+    }
+  ]
+}

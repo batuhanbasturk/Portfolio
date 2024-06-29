@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { FaDownload } from "react-icons/fa";
 //Components
-import Socials from "@/components/Socials";
-import Photo from "@/components/Photo";
-import Stats from "@/components/Stats";
+import Socials from "@/components/home/Socials";
+import Photo from "@/components/home/Photo";
+import Stats from "@/components/home/Stats";
 
 const Home = () => {
   return (
@@ -15,7 +15,9 @@ const Home = () => {
           {/*Text*/}
           <div className="xl:text-justify text-center mt-4">
             <div className="mb-8">
-              <h3 className="text-tertiary mb-2">Software Developer</h3>
+              <h3 className="text-tab dark:text-tertiary mb-2">
+                Software Developer
+              </h3>
               <h1>Batuhan Baştürk</h1>
             </div>
             <p className="max-w-[600px] mb-8">
@@ -26,11 +28,7 @@ const Home = () => {
               developer to continue learning and growth.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-6 mb-8">
-              <Button
-                variant="primary"
-                size="lg"
-                className="flex items-center gap-2"
-              >
+              <Button size="lg" className="flex items-center gap-2">
                 <FaDownload />
                 Download CV
               </Button>

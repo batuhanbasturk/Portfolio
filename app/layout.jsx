@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import SlideFadeTransition from "@/components/SlideFadeTransition";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const blackOpsOne = Black_Ops_One({
   subsets: ["latin"],
@@ -30,13 +31,20 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${(sans.variable, anton.variable, blackOpsOne.variable)} `}
+        className={`${sans.variable} ${anton.variable} ${blackOpsOne.variable} `}
       >
-        <Header />
-        <SlideFadeTransition />
-        <PageTransition>{children}</PageTransition>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <SlideFadeTransition />
+          <PageTransition>{children}</PageTransition>
+        </ThemeProvider>
       </body>
     </html>
   );

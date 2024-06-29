@@ -5,7 +5,7 @@
 @layer base {
   /*Custom base styles */
   body {
-    @apply font-primary bg-primary text-secondary leading-normal;
+    @apply font-primary bg-secondary text-pgray dark:bg-primary dark:text-secondary leading-normal;
   }
   h1 {
     @apply text-5xl xl:text-7xl font-semibold text-accent-default;
@@ -14,9 +14,19 @@
     @apply text-4xl xl:text-5xl font-semibold text-accent-default;
   }
   h3 {
-    @apply text-3xl font-semibold;
+    @apply text-3xl font-semibold text-tab;
   }
   h4 {
-    @apply text-2xl font-semibold;
+    @apply text-2xl font-semibold text-tab dark:text-pgray;
+  }
+
+  :root {
+    --stroke-blue: #268cf9;
+    --stroke-secondary: #1c201c;
+  }
+
+  .dark {
+    --stroke-blue: #0078f9;
+    --stroke-secondary: #ededef;
   }
 }

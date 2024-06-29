@@ -33,7 +33,7 @@ const SlideFade = () => {
               delay: index * 0.1,
             }}
             className={`relative h-full w-full rounded-full xl:mx-4 lg:mx-2 mx-1 ${
-              isWhite ? "bg-secondary" : "bg-accent-default"
+              isWhite ? "bg-primary dark:bg-secondary" : "bg-accent-default"
             }`}
           />
         );

@@ -1,0 +1,38 @@
+{
+  "title": "My Job Experience",
+  "description": "I have worked in the following companies",
+  "companies": [
+    {
+      "name": "OBSS",
+      "position": "Frontend Developer Intern",
+      "date": "07/2023 - 08/2023",
+      "description": [
+        {
+          "value": "Successfully completed an intensive course focused on advanced web development technologies such as TypeScript, Next.js, React, Electron, Websocket."
+        },
+        {
+          "value": "Created and presented 3 different projects named 'Contact Management System', 'Fighter aircraft Status System' and 'Space Invaders Game'."
+        },
+        {
+          "value": "After the course, I proactively took the initiative to advance the Contact Management System’s development by engaging in a dedicated independent study period under guidance of a mentor."
+        }
+      ]
+    },
+    {
+      "name": "Ketencek I.T.",
+      "position": "Frontend Developer Intern",
+      "date": "08/2022 - 09/2022",
+      "description": [
+        {
+          "value": "Developed a pre-design for an upcoming business website independently, successfully completing the project while also gaining valuable experience."
+        },
+        {
+          "value": "Developed knowledge and experience in HTML, CSS, JavaScript, and Frameworks such as Bootstrap and Tailwind."
+        },
+        {
+          "value": "Gained experience in project management by monitoring the project request process and in the execution phase of business projects."
+        }
+      ]
+    }
+  ]
+}

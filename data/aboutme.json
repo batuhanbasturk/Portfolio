@@ -1,0 +1,56 @@
+{
+  "title": "About Me",
+  "description": "Newly graduated computer engineering student with a passion for frontend development. Seeking opportunities to improve skills in HTML-CSS-JS, Typescript, React and frameworks such as Next.js, Tailwind. Interested in an entry-level role as a frontend developer to continue learning and growth.",
+  "info": [
+    {
+      "icon": "FaUser",
+      "title": "Name",
+      "value": "Batuhan Baştürk"
+    },
+    {
+      "icon": "FaCalendar",
+      "title": "Age",
+      "value": "2000-06-07"
+    },
+    {
+      "icon": "FaEnvelope",
+      "title": "Email",
+      "value": "batuhanbasturk636@gmail.com"
+    },
+    {
+      "icon": "FaPhone",
+      "title": "Phone",
+      "value": "(+90) 506 141 26 80"
+    },
+    {
+      "icon": "FaLocationArrow",
+      "title": "Location",
+      "value": "Istanbul, Turkey"
+    },
+    {
+      "icon": "FaSuitcase",
+      "title": "Freelance",
+      "value": "Available"
+    },
+    {
+      "icon": "FaLanguage",
+      "title": "Languages",
+      "value": "Turkish, English"
+    },
+    {
+      "icon": "FaIcons",
+      "title": "Hobbies",
+      "value": "Photography, Exploring new places, Games"
+    },
+    {
+      "icon": "FaBook",
+      "title": "Interests",
+      "value": "Frontend Development, Fullstack Development"
+    },
+    {
+      "icon": "FaGlobe",
+      "title": "Nationality",
+      "value": "Turkish"
+    }
+  ]
+}

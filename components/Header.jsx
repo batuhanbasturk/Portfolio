@@ -5,6 +5,7 @@ import logo from "../public/assets/logo.svg";
 //Components
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
+import ThemeSwitch from "./ThemeSwitch";
 
 const Header = () => {
   return (
@@ -15,7 +16,7 @@ const Header = () => {
           <Image
             src={logo}
             alt="Logo"
-            className="2xl:w-[100px] 2xl:h-[100px] xl:w-[80px] xl:h-[80px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] cursor-pointer"
+            className="2xl:w-[100px] 2xl:h-[100px] xl:w-[80px] xl:h-[80px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] rounded-lg cursor-pointer"
           />
         </Link>
         {/*Navigation*/}
@@ -24,6 +25,7 @@ const Header = () => {
           <Link href="/contact">
             <Button>Contact Me</Button>
           </Link>
+          <ThemeSwitch />
         </div>
         {/*Mobile Navigation*/}
         <div className="xl:hidden">
