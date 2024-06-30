@@ -14,6 +14,7 @@ import Image from "next/image";
 import { IoMenu } from "react-icons/io5";
 import { FaHome, FaFile, FaSuitcase } from "react-icons/fa";
 import logo from "@/public/assets/logo.svg";
+import ThemeSwitch from "./ThemeSwitch";
 
 const links = [
   {
@@ -38,7 +39,7 @@ const MobileNav = () => {
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center">
-        <IoMenu className="text-3xl text-secondary" />
+        <IoMenu className="text-3xl text-tab dark:text-secondary" />
       </SheetTrigger>
       <SheetContent className="flex flex-col z-50">
         {/*Title*/}
@@ -60,6 +61,7 @@ const MobileNav = () => {
         </div>
         {/*Navigation*/}
         <nav className="flex flex-col justify-center items-center gap-8">
+          <ThemeSwitch />
           {links.map((link, index) => {
             return (
               <Link
@@ -68,7 +70,7 @@ const MobileNav = () => {
                 className={
                   pathname === link.path
                     ? " text-accent-default border-b-2 border-accent-default"
-                    : " text-secondary hover:text-accent-hover"
+                    : "text-primary dark:text-secondary hover:text-accent-hover dark:hover:text-accent-hover font-semibold transition-colors duration-300 ease-in-out"
                 }
               >
                 <div className="flex flex-row gap-2">

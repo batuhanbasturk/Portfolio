@@ -33,11 +33,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${sans.variable} ${anton.variable} ${blackOpsOne.variable} `}
+        className={`${sans.variable} ${anton.variable} ${blackOpsOne.variable}`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

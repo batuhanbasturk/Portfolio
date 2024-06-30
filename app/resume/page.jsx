@@ -2,11 +2,13 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
 //Components
-import AboutMe from "@/components/resume/AboutMe";
-import Education from "@/components/resume/Education";
-import Experience from "@/components/resume/Experience";
-import Skills from "@/components/resume/Skills";
+const AboutMe = dynamic(() => import("@/components/resume/AboutMe"));
+const Education = dynamic(() => import("@/components/resume/Education"));
+const Experience = dynamic(() => import("@/components/resume/Experience"));
+const Skills = dynamic(() => import("@/components/resume/Skills"));
 
 const Resume = () => {
   return (
