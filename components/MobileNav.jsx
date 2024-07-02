@@ -39,7 +39,7 @@ const MobileNav = () => {
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center">
-        <IoMenu className="text-3xl text-tab dark:text-secondary" />
+        <IoMenu className="text-4xl text-tab dark:text-secondary" />
       </SheetTrigger>
       <SheetContent className="flex flex-col z-50">
         {/*Title*/}

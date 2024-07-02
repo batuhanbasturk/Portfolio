@@ -2,7 +2,6 @@ import { Open_Sans, Anton, Black_Ops_One } from "next/font/google";
 import "./globals.css";
 //Components
 import Header from "@/components/Header";
-import PageTransition from "@/components/PageTransition";
 import SlideFadeTransition from "@/components/SlideFadeTransition";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
@@ -43,7 +42,7 @@ export default function RootLayout({ children }) {
         >
           <Header />
           <SlideFadeTransition />
-          <PageTransition>{children}</PageTransition>
+          {children}
         </ThemeProvider>
       </body>
     </html>

@@ -12,17 +12,9 @@ const Stats = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        // Check if data is already in localStorage
-        const storedStats = localStorage.getItem("stats");
-        if (storedStats) {
-          setStats(JSON.parse(storedStats));
-        } else {
-          // If not, fetch data from API
-          const response = await fetch("/api/home/stats");
-          const data = await response.json();
-          setStats(data.statsData);
-          localStorage.setItem("stats", JSON.stringify(data.statsData));
-        }
+        const response = await fetch("/api/home/stats");
+        const data = await response.json();
+        setStats(data.statsData);
       } catch (error) {
         setError(error.message);
       } finally {

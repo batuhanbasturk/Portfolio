@@ -3,7 +3,7 @@
     "num": "01",
     "title": "Contact Form Management",
     "category": "Frontend Project",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "description": "This project is a comprehensive web application that includes various functionalities such as user authentication, message handling, report generation, and more. The application is built using React and Material-UI, providing a responsive and user-friendly interface.",
     "image": "/assets/projects/project1.png",
     "link": "https://github.com/batuhanbasturk/OBSS_FE23/tree/master/contact-form-management",
     "stack": [
@@ -11,13 +11,61 @@
       { "name": "Material UI" },
       { "name": "MongoDB" },
       { "name": "Strapi" }
-    ]
+    ],
+    "readmore": {
+      "title": "Contact Management System",
+      "sections": [
+        {
+          "title": "Overview",
+          "content": "This project is a comprehensive web application designed with a focus on user authentication, message handling, and report generation. The application features a responsive design using React and Material-UI, ensuring a seamless user experience across different devices. The application features three different panels based on user authentication and roles: Admin Panel, Reader Panel, and Customer Panel."
+        },
+        {
+          "title": "Key Features",
+          "content": [
+            "Role-Based Access: Admin Panel, Reader Panel, Customer Panel.",
+            "User Authentication: Secure login system with personalized welcome messages.",
+            "Message Management: View, read, and manage messages with detailed information.",
+            "Report Generation: Generate and view reports in various chart formats.",
+            "Responsive Design: Fully responsive design with Material-UI components."
+          ]
+        },
+        {
+          "title": "MongoDB Integration",
+          "content": "The backend is built using MongoDB for database management. User Schema for storing user data, Message Schema for message data, Country Schema for country names, BlacklistedTokens Schema for managing invalid tokens, LastId Schema for tracking the last used IDs. Utility functions in utils.js handle common database operations such as reading, updating, and deleting data, as well as generating the next available user or message ID."
+        },
+        {
+          "title": "Pages",
+          "subsections": [
+            {
+              "title": "Contact Page",
+              "content": "The Contact Page allows users to send messages through a contact form. Users can provide their name, select their gender, choose their country, and write a message. This page uses Material-UI components for the form and includes validation to ensure all required fields are filled out."
+            },
+            {
+              "title": "Login Page",
+              "content": "The Login Page is the entry point for users to access the application. It includes fields for username and password, with validation to ensure the information is correctly entered. Upon successful login, users are redirected to the Welcome Page. The page also handles errors, such as incorrect credentials, and displays appropriate messages to the user."
+            },
+            {
+              "title": "Message Page",
+              "content": "The Message Page lists all messages in a tabular format. Users can view detailed information about each message, mark messages as read, or delete them. The page includes pagination and sorting options to help users navigate through the messages efficiently. Admin users have additional options to delete messages."
+            },
+            {
+              "title": "Users Page",
+              "content": "The Users Page is available to admin users and provides a list of all users. Admins can view and edit user details, such as username, role, and profile picture. They can also add new users or navigate to the User Details Page for more detailed management options."
+            },
+            {
+              "title": "Reports Page",
+              "content": "The Reports Page allows users to generate and view various reports based on message data. Reports are displayed in different chart formats, such as bar charts and pie charts. The page includes options to filter and paginate through the data, providing a comprehensive overview of message statistics."
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "num": "02",
     "title": "Forecasting Workforce Capacity for Supermarket Delivery System",
     "category": "Machine Learning Project",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "description": "This project aims to forecast workforce capacity for supermarket delivery systems using machine learning models. The goal is to enhance supermarkets' adaptability and efficiency in managing the unpredictable volume of online orders.",
     "image": "/assets/projects/project2.png",
     "link": "https://github.com/batuhanbasturk/Bitirme-Projesi",
     "stack": [
@@ -26,28 +74,183 @@
       { "name": "Tensorflow" },
       { "name": "Pandas" },
       { "name": "Numpy" }
-    ]
+    ],
+    "readmore": {
+      "title": "Workforce Capacity Forecasting",
+      "sections": [
+        {
+          "title": "Overview",
+          "content": "This project aims to forecast workforce capacity for supermarket delivery systems using machine learning models. The goal is to enhance supermarkets' adaptability and efficiency in managing the unpredictable volume of online orders."
+        },
+        {
+          "title": "Abstract",
+          "content": "In the dynamic environment of modern supermarkets, the unpredictability of online order volumes poses a significant challenge, especially in workforce forecasting for order preparation and delivery. This project leverages Machine Learning-Based Labor Forecasting to address this issue, considering factors such as seasonal variations, promotional activities, and external influences that complicate accurate workforce prediction."
+        },
+        {
+          "title": "Main Goal and Objectives",
+          "content": [
+            "Collect a Comprehensive Dataset: Gathered a dataset from online shopping warehouses, including records on order volumes, seasonal variations, promotions, and external influences.",
+            "Data Analysis for Pattern Recognition: Conducted in-depth data analysis to identify patterns and factors influencing the unpredictability of online order volumes.",
+            "Develop a Robust Data-Driven Forecasting Model: Created a sophisticated machine learning model that leverages historical data and adapts to ever-changing parameters for accurate prediction of online order volumes.",
+            "Evaluation of Forecasting Model Impact: Evaluated the effectiveness of the forecasting model by assessing key performance indicators, including order fulfillment speed, customer satisfaction, and operational costs."
+          ]
+        },
+        {
+          "title": "System Design and Architecture",
+          "content": "The system design includes data collection and preprocessing, feature engineering, model training, and prediction. The architecture is designed to iteratively improve model accuracy through refinements. If the model does not achieve the required accuracy, further techniques such as ensemble learning (bagging and stacking) are used to improve performance."
+        },
+        {
+          "title": "Implementation",
+          "content": [
+            "Data Collection & Organization: Retrieved detailed information about orders and packages, excluding canceled orders and restricting results to a specified date range.",
+            "Feature Engineering: Created 31 features from the initial 8, including unique category lists and time features derived from package dates.",
+            "Preprocessing: Addressed inconsistencies, handled missing values, and transformed categorical data to improve data quality and model accuracy.",
+            "Algorithm Implementations: Implemented LSTM, XGBoost, Random Forest, Stacking, and Bagging, with hyperparameter tuning and evaluation using metrics such as MAE, RMSE, and P_accuracy."
+          ]
+        },
+        {
+          "title": "Experimental Study",
+          "content": "Evaluated the performance of different machine learning models for regression tasks using various feature sets. The models considered were XGBoost, Random Forest, and LSTM, with results showing that including 'Date Features' tends to enhance performance. For classification tasks, XGBoost outperformed other models, achieving the highest scores across all metrics."
+        }
+      ]
+    }
   },
   {
     "num": "03",
     "title": "Space Invaders Game",
     "category": "Frontend Project",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "description": "A classic Space Invaders game built using HTML5, CSS3, and JavaScript. The game features multiple levels, different enemy types, and power-ups.",
     "image": "/assets/projects/project3.png",
     "link": "https://github.com/batuhanbasturk/OBSS_FE23/tree/master/space-invaders-game",
-    "stack": [{ "name": "HTML5" }, { "name": "CSS3" }, { "name": "Javascript" }]
+    "stack": [
+      { "name": "HTML5" },
+      { "name": "CSS3" },
+      { "name": "Javascript" }
+    ],
+    "readmore": {
+      "title": "Space Invaders Game",
+      "sections": [
+        {
+          "title": "Overview",
+          "content": "A classic Space Invaders game built using HTML5, CSS3, and JavaScript. The game features multiple levels, different enemy types, and power-ups."
+        },
+        {
+          "title": "Game Features",
+          "content": [
+            "Player Control: Use arrow keys to move left and right. Use space bar to shoot.",
+            "Enemies: Multiple types of enemies including Saucers, UFOs, and Bosses, each with unique behaviors.",
+            "Projectiles: Various projectile types for both player and enemies.",
+            "Levels: Progress through multiple levels with increasing difficulty.",
+            "Power-ups: Collect power-ups to enhance your ship's abilities."
+          ]
+        },
+        {
+          "title": "Classes",
+          "subsections": [
+            {
+              "title": "Player",
+              "content": "Handles the player's ship, movement, and shooting. Includes functionality to switch images on key press and manage player's lives."
+            },
+            {
+              "title": "Saucer",
+              "content": "Represents enemy saucers with different types. Handles movement and shooting."
+            },
+            {
+              "title": "UFO",
+              "content": "Special enemy that appears randomly. Moves horizontally and shoots projectiles."
+            },
+            {
+              "title": "Boss",
+              "content": "Final boss with high health and multiple attack patterns. Shoots various projectiles."
+            },
+            {
+              "title": "Projectiles",
+              "content": "Different classes for projectiles fired by players and enemies, each with unique behaviors and appearances."
+            },
+            {
+              "title": "Grid",
+              "content": "Manages the formation and movement of saucers. Handles collision detection and game state updates."
+            }
+          ]
+        },
+        {
+          "title": "Game Logic",
+          "subsections": [
+            {
+              "title": "Animation",
+              "content": "Manages the main animation loop and updates game objects. Includes functions for handling different levels and boss fights."
+            },
+            {
+              "title": "Controls",
+              "content": "Handles player input for both keyboard and touch controls. Includes event listeners for movement and shooting."
+            },
+            {
+              "title": "Game States",
+              "content": "Manages different game states such as home screen, game over screen, pause screen, and game win screen. Handles transitions between these states."
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "num": "04",
     "title": "Fighter Aircraft Status System",
     "category": "Frontend Project",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "description": "This project involves creating a Fighter Aircraft Status System using React, WebSocket, and Electron. The system provides real-time updates on aircraft speed, angle, and battery status, visualized with SVG elements and dynamic CSS effects. The backend, built with WebSocket and Express, manages data broadcasting and real-time communication.",
     "image": "/assets/projects/project4.png",
     "link": "https://github.com/batuhanbasturk/OBSS_FE23/tree/master/fighter-aircraft/fighter-aircraft-client",
     "stack": [
       { "name": "React" },
       { "name": "Electron.js" },
       { "name": "Websocket" }
-    ]
+    ],
+    "readmore": {
+      "title": "Fighter Aircraft Status System",
+      "sections": [
+        {
+          "title": "Overview",
+          "content": "This project involves creating a Fighter Aircraft Status System using React, WebSocket, and Electron. The system provides real-time updates on aircraft speed, angle, and battery status, visualized with SVG elements and dynamic CSS effects. The backend, built with WebSocket and Express, manages data broadcasting and real-time communication."
+        },
+        {
+          "title": "Key Features",
+          "content": [
+            "Real-time Data Processing: Process data coming from the WebSocket connection and update component states.",
+            "Start and Stop Functionality: Implemented start and stop buttons to initiate and stop the data flow.",
+            "Rotational Adjustment: Implemented rotational adjustments for plane and speedometer based on WebSocket data.",
+            "Battery Status: Display battery status with color indications and blinking effects based on battery level."
+          ]
+        },
+        {
+          "title": "Components",
+          "subsections": [
+            {
+              "title": "Plane",
+              "content": "Handles the plane SVG layout and adjusts its rotation based on plane_angle data received from WebSocket."
+            },
+            {
+              "title": "Speedometer",
+              "content": "Handles the speedometer SVG layout and adjusts the rotation of the arrow based on speed data received from WebSocket."
+            },
+            {
+              "title": "Battery",
+              "content": [
+                "Battery SVG Layout: Uses an existing SVG element to represent the battery container with rectangles indicating battery capacity.",
+                "Color Indication: Changes color based on battery level. Green if >50%, yellow if 25-50%, red if <25%.",
+                "Blinking Effect: Blinks when battery level drops below 20%."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Application State Management",
+          "content": "Processes WebSocket data, manages state updates, and provides start and stop functionality. Passes data to Plane, Speedometer, and Battery components."
+        },
+        {
+          "title": "Backend",
+          "content": "The backend uses WebSocket and Express to manage real-time data communication. It handles incoming WebSocket connections, starts and stops the data broadcast, and manages state updates for speed, angle, and battery levels."
+        }
+      ]
+    }
   }
 ]

@@ -1,5 +1,7 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { FaDownload } from "react-icons/fa";
+import { motion } from "framer-motion";
 //Components
 import Socials from "@/components/home/Socials";
 import Photo from "@/components/home/Photo";
@@ -7,7 +9,13 @@ import Stats from "@/components/home/Stats";
 
 const Home = () => {
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 1.5, duration: 0.5, ease: "easeInOut" },
+      }}
+    >
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/*Photo*/}
@@ -38,7 +46,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -16,6 +16,7 @@ const Header = () => {
           <Image
             src={logo}
             alt="Logo"
+            priority
             className="2xl:w-[100px] 2xl:h-[100px] xl:w-[80px] xl:h-[80px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] rounded-lg cursor-pointer"
           />
         </Link>
