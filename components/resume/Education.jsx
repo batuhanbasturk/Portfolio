@@ -37,7 +37,7 @@ const Education = () => {
         {education.school.map((item, index) => (
           <div key={index} className="flex flex-row gap-2">
             {/* Date */}
-            <div className="flex flex-col items-end lg:w-36 mr-4 mt-1">
+            <div className="flex flex-col items-end lg:w-36 mr-4 mt-1 text-center">
               <p>{item.date}</p>
             </div>
             {/* Divider Timeline */}
@@ -48,7 +48,7 @@ const Education = () => {
             {/* School Info */}
             <div className="flex-1 mb-8">
               <h4 className="mb-4 dark:text-pgray">{item.name}</h4>
-              <ul className="list-disc ml-4 w-[40vw]">
+              <ul className="list-disc ml-4 w-[60vw] md:w-[50vw] lg:w-[40vw]">
                 {item.description.map((desc, index) => (
                   <li key={index} className="mb-2">
                     {desc.value}

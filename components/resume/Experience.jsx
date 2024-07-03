@@ -38,8 +38,10 @@ const Experience = () => {
         {experience.companies.map((company, index) => (
           <div key={index} className="flex flex-row gap-2">
             {/* Company and Date */}
-            <div className="flex flex-col items-end lg:w-36 mr-4 mt-1">
-              <p className="text-xs">{company.date}</p>
+            <div className="flex flex-col items-center md:items-end lg:w-36 mr-4 mt-1 text-center min-w-[100px]">
+              <p className="whitespace-pre-line md:whitespace-normal">
+                {company.date}
+              </p>
               <p className="text-tab dark:text-pgray font-semibold">
                 {company.name}
               </p>
@@ -52,7 +54,7 @@ const Experience = () => {
             {/* Position and Description */}
             <div className="flex-1 mb-8">
               <h4 className="mb-4 dark:text-pgray">{company.position}</h4>
-              <ul className="list-disc ml-4 w-[40vw]">
+              <ul className="list-disc ml-4 lg:w-[40vw] md:w-[50vw]">
                 {company.description.map((desc, descIndex) => (
                   <li key={descIndex} className="mb-2">
                     {desc.value}
