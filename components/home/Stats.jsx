@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react";
 import CountUp from "react-countup";
-import { motion } from "framer-motion";
+//Components
+import Loading from "../Loading";
+import Error from "../Error";
 
 const Stats = () => {
   const [stats, setStats] = useState([]);
@@ -14,9 +16,13 @@ const Stats = () => {
       try {
         const response = await fetch("/api/home/stats");
         const data = await response.json();
+        if (!response.ok) {
+          setError({ message: data.message, status: response.status });
+          return;
+        }
         setStats(data.statsData);
       } catch (error) {
-        setError(error.message);
+        setError({ message: error.message, status: 500 });
       } finally {
         setLoading(false);
       }
@@ -26,19 +32,11 @@ const Stats = () => {
   }, []);
 
   if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 1 }}
-          className="w-16 h-16 border-4 border-t-4 border-t-accent-default border-gray-300 rounded-full"
-        />
-      </div>
-    );
+    return <Loading />;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <Error message={error.message} status={error.status} />;
   }
 
   return (

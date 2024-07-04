@@ -11,17 +11,21 @@ import {
   SiHtml5,
   SiCss3,
 } from "react-icons/si";
+//Shadcn
 import {
   Tooltip,
   TooltipProvider,
   TooltipTrigger,
   TooltipContent,
 } from "../ui/tooltip";
+//Components
 import Loading from "../Loading";
+import Error from "../Error";
 
 const Skills = () => {
   const [skills, setSkills] = useState(null);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const icons = {
     SiNextdotjs: <SiNextdotjs />,
@@ -37,26 +41,32 @@ const Skills = () => {
   };
 
   useEffect(() => {
-    fetch("/api/resume/skills")
-      .then((response) => {
+    const fetchSkills = async () => {
+      try {
+        const response = await fetch("/api/resume/skills");
+        const data = await response.json();
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          setError({
+            message: data.message || "Network response was not ok",
+            status: response.status,
+          });
+          return;
         }
-        return response.json();
-      })
-      .then((data) => {
         setSkills(data);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+      } catch (error) {
+        setError({ message: error.message, status: error.status || 500 });
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchSkills();
   }, []);
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <Error message={error.message} status={error.status} />;
   }
 
-  if (!skills) {
+  if (loading) {
     return <Loading />;
   }
 

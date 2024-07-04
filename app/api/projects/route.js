@@ -3,9 +3,10 @@ import projects from "@/data/projects.json";
 
 export async function GET() {
   try {
-    return NextResponse.json(projects);
+    return NextResponse.json(projects, { status: 200 });
   } catch (error) {
-    console.error("An error occurred:", error);
-    return NextResponse.error(new Error("Internal Server Error"));
+    return NextResponse.json(new Error(error), {
+      status: 500,
+    });
   }
 }

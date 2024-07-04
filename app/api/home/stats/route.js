@@ -10,9 +10,10 @@ export async function GET() {
     stats.statsData[1].count = projects.length;
     stats.statsData[2].count = skills.skillList.length;
 
-    return NextResponse.json(stats);
+    return NextResponse.json(stats, { status: 200 });
   } catch (error) {
-    console.error("An error occurred:", error);
-    return NextResponse.error(new Error("Internal Server Error"));
+    return NextResponse.json(new Error(error), {
+      status: 500,
+    });
   }
 }

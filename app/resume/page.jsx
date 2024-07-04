@@ -1,9 +1,8 @@
 "use client";
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-
+//Shadcn
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 //Components
 const AboutMe = dynamic(() => import("@/components/resume/AboutMe"));
 const Education = dynamic(() => import("@/components/resume/Education"));

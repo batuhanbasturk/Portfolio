@@ -1,32 +1,43 @@
 import { useEffect, useState } from "react";
+//Shadcn
 import { ScrollArea } from "../ui/scroll-area";
+//Components
 import Loading from "../Loading";
+import Error from "../Error";
 
 const Education = () => {
   const [education, setEducation] = useState(null);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/resume/education")
-      .then((response) => {
+    const fetchEducation = async () => {
+      try {
+        const response = await fetch("/api/resume/education");
+        const data = await response.json();
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          setError({
+            message: data.message || "Network response was not ok",
+            status: response.status,
+          });
+          return;
         }
-        return response.json();
-      })
-      .then((data) => {
         setEducation(data);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+      } catch (error) {
+        setError({ message: error.message, status: error.status || 500 });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchEducation();
   }, []);
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <Error message={error.message} status={error.status} />;
   }
 
-  if (!education) {
+  if (loading) {
     return <Loading />;
   }
 

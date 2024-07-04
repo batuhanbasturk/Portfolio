@@ -12,6 +12,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Loading from "@/components/Loading";
+import Error from "@/components/Error";
+import ProjectNotFoundPage from "@/components/ProjectNotFound";
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
@@ -24,11 +26,15 @@ const ProjectDetail = () => {
       try {
         const response = await fetch("/api/projects");
         const projects = await response.json();
+        if (!response.ok) {
+          setError({ message: projects.message, status: response.status });
+          return;
+        }
         const project = projects.find((proj) => proj.num === projectId);
         setProject(project);
         setLoading(false);
-      } catch (err) {
-        setError(err);
+      } catch (error) {
+        setError({ message: error.message, status: error.status || 500 });
         setLoading(false);
       }
     };
@@ -41,11 +47,11 @@ const ProjectDetail = () => {
   }
 
   if (error) {
-    return <div>An error occurred: {error.message}</div>;
+    return <Error message={error.message} status={error.status} />;
   }
 
   if (!project) {
-    return <div>Project not found</div>;
+    return <ProjectNotFoundPage />;
   }
 
   return (

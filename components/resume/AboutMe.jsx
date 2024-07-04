@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import calculateYear from "@/utils/calculateYear";
 import {
   FaUser,
   FaCalendar,
@@ -13,7 +12,11 @@ import {
   FaBook,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+//Components
 import Loading from "../Loading";
+import Error from "../Error";
+//Utils
+import calculateYear from "@/utils/calculateYear";
 
 const iconMap = {
   FaUser: <FaUser />,
@@ -31,16 +34,20 @@ const iconMap = {
 const AboutMe = () => {
   const [aboutme, setAboutme] = useState(null);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/resume/aboutme")
-      .then((response) => {
+    const fetchAboutMe = async () => {
+      try {
+        const response = await fetch("/api/resume/aboutme");
+        const data = await response.json();
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          setError({
+            message: data.message || "Network response was not ok",
+            status: response.status,
+          });
+          return;
         }
-        return response.json();
-      })
-      .then((data) => {
         data.info = data.info.map((item) => {
           if (item.title === "Age") {
             item.value = calculateYear(new Date(item.value));
@@ -65,17 +72,21 @@ const AboutMe = () => {
           return item;
         });
         setAboutme(data);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+      } catch (error) {
+        setError({ message: error.message, status: error.status || 500 });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAboutMe();
   }, []);
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <Error message={error.message} status={error.status} />;
   }
 
-  if (!aboutme) {
+  if (loading) {
     return <Loading />;
   }
 

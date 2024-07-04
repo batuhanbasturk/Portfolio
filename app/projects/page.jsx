@@ -17,6 +17,7 @@ import {
   TooltipContent,
 } from "../../components/ui/tooltip";
 import Loading from "@/components/Loading";
+import Error from "@/components/Error";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -29,10 +30,15 @@ const Projects = () => {
       try {
         const response = await fetch("/api/projects");
         const data = await response.json();
+
+        if (!response.ok) {
+          setError({ message: data.message, status: response.status });
+          return;
+        }
         setProjects(data);
         setProject(data[0]);
       } catch (error) {
-        setError(error.message);
+        setError({ message: error.message, status: error.status || 500 });
       } finally {
         setLoading(false);
       }
@@ -46,7 +52,7 @@ const Projects = () => {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <Error message={error.message} status={error.status} />;
   }
 
   return (

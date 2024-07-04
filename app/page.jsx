@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
-import Link from "next/link";
 //Components
 import Socials from "@/components/home/Socials";
 import Photo from "@/components/home/Photo";

@@ -3,9 +3,10 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    return NextResponse.json(skills);
+    return NextResponse.json(skills, { status: 200 });
   } catch (error) {
-    console.error("An error occurred:", error);
-    return NextResponse.error(new Error("Internal Server Error"));
+    return NextResponse.json(new Error(error), {
+      status: 500,
+    });
   }
 }
